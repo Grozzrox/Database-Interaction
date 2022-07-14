@@ -18,8 +18,10 @@ namespace School
 
             Console.WriteLine("School created!");
 
-            Insert(st1);
+
+            Insert(st2);
             GetStudents();
+            
 
             //your connection string has all the details needed to connect to a database
             
@@ -68,6 +70,9 @@ namespace School
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open(); // open the connection to the database
 
+            string cmdText = "SELECT Id, Name, Phone FROM School.Students;";
+
+            using SqlCommand cmd = new SqlCommand(cmdText, connection);
             
 
             // cmd.ExecuteNonQuery();
