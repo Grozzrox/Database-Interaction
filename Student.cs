@@ -5,12 +5,12 @@ namespace School
     class Student : Person
     {
         // Fields
-        private double GPA = 0.0;
-        private int YearsCompleted;
+        public double GPA = 0.0;
+        public int YearsCompleted;
 
         // Constructor
-        public Student(string name, int Id, string email, string phone, string address1, 
-            string address2, string city, string state, string zip, int age, double GPA, int YearsCompleted)
+        public Student(string name, string email, string phone, string address1, 
+            string address2, string city, string state, string zip, int age, int YearsCompleted)
         {
             this.name = name;
             this.Id = MaxId;
@@ -23,7 +23,6 @@ namespace School
             this.state = state;
             this.zip = zip;
             this.age = age;
-            this.GPA = GPA;
             this.YearsCompleted = YearsCompleted;
         }
 
